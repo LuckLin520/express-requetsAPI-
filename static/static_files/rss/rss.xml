@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" title="XSL Formatting" href="/static_files/rss/rss.xsl" media="all" ?>
+<rss version="2.0">
+    <channel>
+        <title>luck_lin</title>
+        <image>
+            <link>https://blog.csdn.net/</link>
+            <url>https://static-blog.csdn.net/images/logo.gif</url>
+        </image>
+        <description>个人学习记录</description>
+        <link>https://blog.csdn.net/qwe502763576</link>
+        <language>zh-cn</language>
+        <generator>https://blog.csdn.net/</generator>
+        <ttl>5</ttl>
+        <copyright><![CDATA[Copyright &copy; qwe502763576]]></copyright>
+        <pubDate>2018/09/06 17:04:39</pubDate>
+                    <item>
+                                <title><![CDATA[[原]wordpress快速搭建个人博客，插件以及主题的安装！]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/82457978</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/82457978</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/09/06 13:35:27</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>下载wordpress不说了，说下简单的数据库配置吧，在wordpress根目录下找到wp-config.php文件，用编辑器打开，找到如下代码：</p>
+
+<pre class="has">
+<code class="language-php">// ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
+/** WordPress数据库的名称 */
+define('DB_NAME', 'MYSQL-NAME');
+
+/** MySQL数据库用户名 */
+define('DB_USER', 'MYSQL-USERNAME');
+
+/** MySQL数据库密码 */
+define('DB_PASSWORD', 'MYSQL-PASSWORD');
+
+/** MySQL主机 */
+define('DB_HOST', 'localhost');
+
+/** 创建数据表时默认的文字编码 */
+define('DB_CHARSET', 'utf8');
+
+/** 数据库整理类型。如不确定请勿更改 */
+define('DB_COLLATE', '');</code></pre>
+
+<p>对应将MYSQL-NAME、MYSQL-USERNAME、MYSQL-PASSWORD、localhost 更改为自己的，保存就ok；</p>
+
+<h2>进入wordpress后台管理：</h2>
+
+<p>将wordpress放到服务器上后，浏览器地址栏输入：服务器地址或域名/wp-admin 登陆后即可进入管理页面，如下</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906112237675?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<h2>主题插件安装：</h2>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906113117908?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>插件和主题安装类似，可以在线选择官方插件和主题，也可以在网上下载主题插件安装，从网上下载的主题如果该主题依赖插件的话主题包内都一并附有所需要的插件，下载下来的是zip压缩包，比如我下载的这个：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906132201752?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>打开plugins文件，里面有三个文件：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906132401764?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>这三个文件就是三个插件，而打开iphoto里面有langguages，includes，images文件夹，还有style.css文件，说明这个就是主题文件：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906132523935?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>安装有两种方法，一种是直接将那三个插件文件复制到wordpress以下目录下：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906132844752?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180906133115441?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>另一种方法就是在管理后台中上添加插件、添加主题，选择上传本地压缩包，不过只能一个一个上传，并且将每个插件和主题文件压缩成zip格式。</p>
+
+<p>然后点击启用上传的插件和主题即可。</p>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/09/06 13:35:27 <a href="https://blog.csdn.net/qwe502763576/article/details/82457978">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/82457978                    </div>
+                    <div>
+                        阅读：5                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]python6---WSGI接口和web框架flask]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81781811</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81781811</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/17 18:37:44</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>WSGI接口定义非常简单，它只要求Web开发者实现一个函数，就可以响应HTTP请求。我们来看一个最简单的Web版本的“Hello, web!”：</p>
+
+<pre class="has">
+<code class="language-python">def application(environ, start_response):
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    return [b'&lt;h1&gt;Hello, web!&lt;/h1&gt;']</code></pre>
+
+<p>上面的<code>application()</code>函数就是符合WSGI标准的一个HTTP处理函数，它接收两个参数：</p>
+
+<ul><li>
+	<p>environ：一个包含所有HTTP请求信息的<code>dict</code>对象；</p>
+	</li>
+	<li>
+	<p>start_response：一个发送HTTP响应的函数。</p>
+	</li>
+</ul><p>start_response('200 OK', [('Content-Type', 'text/html')])发送了HTTP响应的Header，注意Header只能发送一次，也就是只能调用一次<code>start_response()</code>函数。<code>start_response()</code>函数接收两个参数，一个是HTTP响应码，一个是一组<code>list</code>表示的HTTP Header，每个Header用一个包含两个<code>str</code>的<code>tuple</code>表示。</p>
+
+<h3>运行WSGI服务</h3>
+
+<p>我们先编写<code>hello.py</code>，实现Web应用程序的WSGI处理函数：</p>
+
+<pre class="has">
+<code class="language-python"># hello.py
+
+def application(environ, start_response):
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    return [b'&lt;h1&gt;Hello, web!&lt;/h1&gt;']</code></pre>
+
+<p>然后，再编写一个<code>server.py</code>，负责启动WSGI服务器，加载<code>application()</code>函数：</p>
+
+<pre class="has">
+<code class="language-python"># server.py
+# 从wsgiref模块导入:
+from wsgiref.simple_server import make_server
+# 导入我们自己编写的application函数:
+from hello import application
+
+# 创建一个服务器，IP地址为空，端口是8000，处理函数是application:
+httpd = make_server('', 8000, application)
+print('Serving HTTP on port 8000...')
+# 开始监听HTTP请求:
+httpd.serve_forever()</code></pre>
+
+<p>确保以上两个文件在同一个目录下，然后在命令行输入<code>python server.py</code>来启动WSGI服务器，启动成功后，打开浏览器，输入<code>http://localhost:8000/</code>，就可以看到结果了：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180817182708507?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>如果你觉得这个Web应用太简单了，可以稍微改造一下，从<code>environ</code>里读取<code>PATH_INFO</code>，这样可以显示更加动态的内容：</p>
+
+<pre class="has">
+<code class="language-python"># hello.py
+
+def application(environ, start_response):
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    body = '&lt;h1&gt;Hello, %s!&lt;/h1&gt;' % (environ['PATH_INFO'][1:] or 'web')
+    return [body.encode('utf-8')]</code></pre>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180817182908674?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<h3>使用Web框架flask</h3>
+
+<p>了解了WSGI框架，我们发现：其实一个Web App，就是写一个WSGI的处理函数，针对每个HTTP请求进行响应。</p>
+
+<p>但是如何处理HTTP请求不是问题，问题是如何处理100个不同的URL。</p>
+
+<p>每一个URL可以对应GET和POST请求，当然还有PUT、DELETE等请求，但是我们通常只考虑最常见的GET和POST请求。</p>
+
+<p>一个最简单的想法是从<code>environ</code>变量里取出HTTP请求的信息，然后逐个判断：</p>
+
+<pre class="has">
+<code class="language-python">def application(environ, start_response):
+    method = environ['REQUEST_METHOD']
+    path = environ['PATH_INFO']
+    if method=='GET' and path=='/':
+        return handle_home(environ, start_response)
+    if method=='POST' and path='/signin':
+        return handle_signin(environ, start_response)
+    ...</code></pre>
+
+<p>只是这么写下去代码是肯定没法维护了。</p>
+
+<p>代码这么写没法维护的原因是因为WSGI提供的接口虽然比HTTP接口高级了不少，但和Web App的处理逻辑比，还是比较低级，我们需要在WSGI接口之上能进一步抽象，让我们专注于用一个函数处理一个URL，至于URL到函数的映射，就交给Web框架来做。</p>
+
+<p>安装Flask：</p>
+
+<pre class="has">
+<code>&gt;&gt;&gt; pip install flask</code></pre>
+
+<p>然后写一个<code>app.py</code>，处理3个URL，分别是：</p>
+
+<ul><li>
+	<p><code>GET /</code>：首页，返回<code>Home</code>；</p>
+	</li>
+	<li>
+	<p><code>GET /signin</code>：登录页，显示登录表单；</p>
+	</li>
+	<li>
+	<p><code>POST /signin</code>：处理登录表单，显示登录结果。</p>
+	</li>
+</ul><p>注意噢，同一个URL<code>/signin</code>分别有GET和POST两种请求，映射到两个处理函数中。Flask通过Python的<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014318435599930270c0381a3b44db991cd6d858064ac0000" rel="nofollow">装饰器</a>在内部自动地把URL和函数给关联起来，所以，我们写出来的代码就像这样：</p>
+
+<pre class="has">
+<code class="language-python">from flask import Flask
+from flask import request
+
+app = Flask(__name__)
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    return '&lt;h1&gt;Home&lt;/h1&gt;'
+
+@app.route('/signin', methods=['GET'])
+def signin_form():
+    return '''&lt;form action="/signin" method="post"&gt;
+              &lt;p&gt;&lt;input name="username"&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;input name="password" type="password"&gt;&lt;/p&gt;
+              &lt;p&gt;&lt;button type="submit"&gt;Sign In&lt;/button&gt;&lt;/p&gt;
+              &lt;/form&gt;'''
+
+@app.route('/signin', methods=['POST'])
+def signin():
+    # 需要从request对象读取表单内容：
+    if request.form['username']=='admin' and request.form['password']=='password':
+        return '&lt;h3&gt;Hello, admin!&lt;/h3&gt;'
+    return '&lt;h3&gt;Bad username or password.&lt;/h3&gt;'
+
+if __name__ == '__main__':
+    app.run()</code></pre>
+
+<p> 运行<code>python app.py</code>，Flask自带的Server在端口<code>5000</code>上监听,打开浏览器，输入首页地址<code>http://localhost:5000/</code>：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180817183408232?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>首页显示正确！再在浏览器地址栏输入<code>http://localhost:5000/signin</code>，会显示登录表单:</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180817183504940?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>输入预设的用户名<code>admin</code>和口令<code>password</code>，登录成功：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/2018081718361553?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>输入其他错误的用户名和口令，登录失败：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180817183648780?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>实际的Web App应该拿到用户名和口令后，去数据库查询再比对，来判断用户是否能登录成功。</p>
+
+<p>除了Flask，常见的Python Web框架还有：</p>
+
+<ul><li>
+	<p><a href="https://www.djangoproject.com/" rel="nofollow">Django</a>：全能型Web框架；</p>
+	</li>
+	<li>
+	<p><a href="http://webpy.org/" rel="nofollow">web.py</a>：一个小巧的Web框架；</p>
+	</li>
+	<li>
+	<p><a href="http://bottlepy.org/" rel="nofollow">Bottle</a>：和Flask类似的Web框架；</p>
+	</li>
+	<li>
+	<p><a href="http://www.tornadoweb.org/" rel="nofollow">Tornado</a>：Facebook的开源异步Web框架。</p>
+	</li>
+</ul>                    <div>
+                        作者：qwe502763576 发表于 2018/08/17 18:37:44 <a href="https://blog.csdn.net/qwe502763576/article/details/81781811">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81781811                    </div>
+                    <div>
+                        阅读：45                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]python学习5---@property]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81744115</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81744115</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/16 17:25:05</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>Python内置的<code>@property</code>装饰器就是负责把一个方法变成属性调用的：</p>
+
+<pre class="has">
+<code class="language-python">class Student(object):
+    @property
+    def score(self):
+        return self._score
+    @score.setter
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score must be an integer!')
+        if value &lt; 0 or value &gt; 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value</code></pre>
+
+<p>把一个getter方法变成属性，只需要加上<code>@property</code>就可以了，此时，<code>@property</code>本身又创建了另一个装饰器<code>@score.setter</code>，负责把一个setter方法变成属性赋值，于是，我们就拥有一个可控的属性操作：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; s = Student()
+&gt;&gt;&gt; s.score = 60 # OK，实际转化为s.set_score(60)
+&gt;&gt;&gt; s.score # OK，实际转化为s.get_score()
+60
+&gt;&gt;&gt; s.score = 9999
+Traceback (most recent call last):
+  ...
+ValueError: score must between 0 ~ 100!</code></pre>
+
+<p>下面利用<code>@property</code>给一个<code>Screen</code>对象加上<code>width</code>和<code>height</code>属性，以及一个只读属性<code>resolution</code>：</p>
+
+<pre class="has">
+<code class="language-python">class Screen(object):
+    @property
+    def width(self):
+    	return self._width
+    @width.setter
+    def width(self, value):
+    	if value &lt; 500:
+    		raise ValueError('width is so small!')
+    	self._width = value
+    @property
+    def height(self):
+    	return self._height
+    @height.setter
+    def height(self, value):
+    	if value &lt; 500:
+    		raise ValueError('height is so small!')
+    	self._height = value
+    @property
+    def resolution(self):
+    	return self._width * self._height   
+nokia = Screen()
+nokia.width = 2000
+nokia.height = 1000
+print(nokia.resolution)</code></pre>
+
+<p><strong>关于下划线：</strong>_height和_width前面加的一个下划线都是定义一个保护变量，告诉别人只能在这个类里面用，外部最好不要调用，而没有下划线的是函数名，@property和@xxx。setter正好是把函数变成了属性，所以在外部调用时用s.xxx=xxx这样就相当于直接调用了函数，而不是调用函数里面的保护变量，就相当于之前我们熟悉的s.name=xxx和s.age=xx这样的形式。而如果把保护变量前面的下划线去掉就跟函数名冲突，每次调用属性，也就是函数，就会进入该函数，然后一直调用这个函数，就形成死循环。</p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/16 17:25:05 <a href="https://blog.csdn.net/qwe502763576/article/details/81744115">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81744115                    </div>
+                    <div>
+                        阅读：17                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]python学习4---OOP]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81741253</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81741253</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/16 15:42:06</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>创建一个英雄类：</p>
+
+<pre class="has">
+<code class="language-python">class Hero(object):
+	def __init__(self, name, position):
+		self.name = name
+		self.position = position
+hero = Hero("盖伦", "上单")#实例化一个英雄
+print(hero.name)</code></pre>
+
+<p>私有变量、访问限制：</p>
+
+<pre class="has">
+<code class="language-python">class Hero(object):
+	def __init__(self, name, position):
+		self.__name = name
+		self.__position = position
+hero = Hero("盖伦", "上单")#实例化一个英雄
+print(hero.name)</code></pre>
+
+<p>这时不管是用hero.name还是hero.__name都是无法访问到name的，并且会报错：AttributeError: 'Hero' object has no attribute 'name'，如果外部代码要获取name和score怎么办？可以给Student类增加<code>get_name</code>和<code>get_score</code>这样的方法：</p>
+
+<pre class="has">
+<code class="language-python">class Hero(object):
+	def __init__(self, name, position):
+		self.__name = name
+		self.__position = position
+	def get_name(self):
+		return self.__name
+	def get_position(self):
+		return self.__position
+hero = Hero("盖伦", "上单")
+print(hero.get_name())</code></pre>
+
+<p>要修改的话，同理在类中增加set_name等方法，并且还可以在方法中做判断、监听等操作。</p>
+
+<p>在Python中，变量名类似<code>__xxx__</code>的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以，不能用<code>__name__</code>、<code>__score__</code>这样的变量名。</p>
+
+<p>有些时候，你会看到以一个下划线开头的实例变量名，比如<code>_name</code>，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。</p>
+
+<p>双下划线开头的实例变量是不是一定不能从外部访问呢？其实也不是。不能直接访问<code>__name</code>是因为Python解释器对外把<code>__name</code>变量改成了<code>_Student__name</code>，所以，仍然可以通过<code>_Student__name</code>来访问<code>__name</code>变量。</p>
+
+<p> </p>
+
+<h3>继承：</h3>
+
+<p>创建一个类：</p>
+
+<pre class="has">
+<code class="language-python">class Animal(object):
+	def run(self):
+		print("animal is running...")</code></pre>
+
+<p>创建一个类继承自Animal类：</p>
+
+<pre class="has">
+<code class="language-python">class Dog(Animal):
+	pass
+dog = Dog()
+dog.run()
+</code></pre>
+
+<p>命令行得到：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/2018081615010490?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>想让某一个子类不继承父类某一个方法，可以在该类中增加一个该方法，当父类和子类拥有同一个方法时只会执行子类自身的。</p>
+
+<p> </p>
+
+<p>当我们定义一个class的时候，我们实际上就定义了一种数据类型。我们定义的数据类型和Python自带的数据类型，比如str、list、dict没什么两样，判断一个变量是否是某个类型可以用<code>isinstance()</code>判断，类似js中 INSTANCE instanceof Object：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; isinstance(1, int)
+True
+&gt;&gt;&gt; isinstance(dog, Dog)
+True</code></pre>
+
+<p>注意：因为Dog继承自Animal，所以：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; isinstance(dog, Animal)
+True</code></pre>
+
+<h3>获取对象信息:</h3>
+
+<p>type()一般用来判断基本类型：</p>
+
+<pre class="has">
+<code class="language-bash">&gt;&gt;&gt; type(123)
+&lt;class 'int'&gt;
+&gt;&gt;&gt; type('str')
+&lt;class 'str'&gt;
+&gt;&gt;&gt; type(None)
+&lt;type(None) 'NoneType'&gt;</code></pre>
+
+<p>如果一个变量指向函数或者类，也可以用<code>type()</code>判断：</p>
+
+<pre class="has">
+<code class="language-bash">&gt;&gt;&gt; type(abs)
+&lt;class 'builtin_function_or_method'&gt;
+&gt;&gt;&gt; type(dog)
+&lt;class '__main__.Dog'&gt;</code></pre>
+
+<p>判断两个值类型是否相同：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; type(123)==type(456)
+True
+&gt;&gt;&gt; type(123)==int
+True
+&gt;&gt;&gt; type('abc')==type('123')
+True
+&gt;&gt;&gt; type('abc')==str
+True
+&gt;&gt;&gt; type('abc')==type(123)
+False</code></pre>
+
+<p>判断基本数据类型可以直接写<code>int</code>，<code>str</code>等，但如果要判断一个对象是否是函数怎么办？可以使用<code>types</code>模块中定义的常量：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; import types
+&gt;&gt;&gt; def fn():
+...     pass
+...
+&gt;&gt;&gt; type(fn)==types.FunctionType
+True
+&gt;&gt;&gt; type(abs)==types.BuiltinFunctionType
+True
+&gt;&gt;&gt; type(lambda x: x)==types.LambdaType
+True
+&gt;&gt;&gt; type((x for x in range(10)))==types.GeneratorType
+True</code></pre>
+
+<h3>使用dir()</h3>
+
+<p>如果要获得一个对象的所有属性和方法，可以使用<code>dir()</code>函数，它返回一个包含字符串的list，比如，获得一个str对象的所有属性和方法：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; dir('ABC')
+['__add__', '__class__',..., '__subclasshook__', 'capitalize', 'casefold',..., 'zfill']</code></pre>
+
+<p>类似<code>__xxx__</code>的属性和方法在Python中都是有特殊用途的，比如<code>__len__</code>方法返回长度。在Python中，如果你调用<code>len()</code>函数试图获取一个对象的长度，实际上，在<code>len()</code>函数内部，它自动去调用该对象的<code>__len__()</code>方法，我们自己写的类，如果也想用<code>len(myObj)</code>的话，就自己写一个<code>__len__()</code>方法：</p>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; class MyDog(object):
+...     def __len__(self):
+...         return 100
+...
+&gt;&gt;&gt; dog = MyDog()
+&gt;&gt;&gt; len(dog)
+100</code></pre>
+
+<h3><code>getattr()</code>、<code>setattr()<font face="-apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun">、</font></code><code>hasattr()</code>：</h3>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; class MyObject(object):
+...     def __init__(self):
+...         self.x = 9
+...     def power(self):
+...         return self.x * self.x
+...
+&gt;&gt;&gt; obj = MyObject()</code></pre>
+
+<pre class="has">
+<code class="language-python">&gt;&gt;&gt; hasattr(obj, 'x') # 有属性'x'吗？
+True
+&gt;&gt;&gt; obj.x
+9
+&gt;&gt;&gt; hasattr(obj, 'y') # 有属性'y'吗？
+False
+&gt;&gt;&gt; setattr(obj, 'y', 19) # 设置一个属性'y'
+&gt;&gt;&gt; hasattr(obj, 'y') # 有属性'y'吗？
+True
+&gt;&gt;&gt; getattr(obj, 'y') # 获取属性'y'
+19
+&gt;&gt;&gt; obj.y # 获取属性'y'
+19</code></pre>
+
+<p>通过内置的一系列函数，我们可以对任意一个Python对象进行剖析，拿到其内部的数据。要注意的是，只有在不知道对象信息的时候，我们才会去获取对象信息。如果可以直接写：sum = obj.x + obj.y，就不要写：sum = getattr(obj, 'x') + getattr(obj, 'y')</p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/16 15:42:06 <a href="https://blog.csdn.net/qwe502763576/article/details/81741253">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81741253                    </div>
+                    <div>
+                        阅读：13                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]python学习3---模块]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81740061</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81740061</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/16 13:59:18</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>新建一个模块calc.py:</p>
+
+<pre class="has">
+<code class="language-python">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+' a test module '
+
+__author__ = 'Michael Liao'
+
+def addFunc(a,b):  
+    return a+b  
+
+if __name__ == '__main__':
+	print('自身计算结果：', addFunc(1,1))</code></pre>
+
+<p>在同目录下test8.py文件中引用该模块：</p>
+
+<pre class="has">
+<code class="language-python">import calc
+print(calc.addFunc(5,5))</code></pre>
+
+<p>命令行执行python calc.py:</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180816134855734?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>执行python test8.py:</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180816134951495?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>注：__name__有2个取值：当模块是被调用执行的，取值为模块的名字；当模块是直接执行的，则该变量取值为：__main__</p>
+
+<h3>安装第三方模块：</h3>
+
+<p>在Python中，安装第三方模块，是通过包管理工具pip完成的。<br />
+如果你正在使用Mac或Linux，安装pip本身这个步骤就可以跳过了。<br />
+如果你正在使用Windows，请参考安装Python一节的内容，确保安装时勾选了pip和Add python.exe to Path。<br />
+在命令提示符窗口下尝试运行pip，如果Windows提示未找到命令，可以重新运行安装程序添加pip。<br />
+注意：Mac或Linux上有可能并存Python 3.x和Python 2.x，因此对应的pip命令是pip3。</p>
+
+<p>推荐直接使用<a href="https://www.anaconda.com/" rel="nofollow">Anaconda</a>，这是一个基于Python的数据处理和科学计算平台，它已经内置了许多非常有用的第三方库，我们装上Anaconda，就相当于把数十个第三方模块自动安装好了，非常简单易用。</p>
+
+<p>可以尝试直接<code>import MODULE_NAME </code>已安装的第三方模块。</p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/16 13:59:18 <a href="https://blog.csdn.net/qwe502763576/article/details/81740061">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81740061                    </div>
+                    <div>
+                        阅读：22                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]express爬取静态页面---rss的xml]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81738291</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81738291</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/16 11:50:33</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>首先init一个项目，安装express，安装request模块,新建一个js文件,main.js:</p>
+
+<pre class="has">
+<code class="language-javascript">var express = require('express')
+var app = express()
+var request = require('request')
+var fs = require("fs")
+
+app.use(express.static("static"))
+app.get('/login', (req, res) =&gt;{
+  request('https://blog.csdn.net/qwe502763576/rss/list', (err, response, body) =&gt; {
+    // console.log(err);
+    // console.log(response &amp;&amp; response.statusCode);
+    // console.log(body);
+    fs.writeFile("static/static_files/rss/rss.xml", body, {}, (err) =&gt; {
+    	console.log(err)
+    })
+    res.send(body)
+  })
+})
+
+app.listen(8888, (err) =&gt; {
+  console.log("服务已启动")
+})
+</code></pre>
+
+<p>引入了fs模块将获取的数据写入静态资源文件static下的static_files/rss目录下，并命名rss.xml，同事也将获取的数据send给了前端。</p>
+
+<p>目录结构：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/2018081611223151?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>index.html：</p>
+
+<pre class="has">
+<code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="box"&gt;&lt;/div&gt;
+	&lt;button onclick="gologin()"&gt;login&lt;/button&gt;
+&lt;script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+	console.log($)
+	function gologin() {
+		$.ajax({
+		   type: "GET",
+		   url: "/login",
+		   dataType: 'text',
+		   success: function(msg){
+		   		console.log(msg)
+		   		location.assign('http://localhost:8888/static_files/rss/rss.xml')
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+	}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>这里用jq的$.ajax接收到了获取的数据，但是没有对其做操作，而是在获取到数据后直接跳转到访问静态资源目录下的static_files/rss/rss.xml文件，这时跳转过去并不能看到xml文件内容，页面是空白的，打开控制台可以看到一个xsl文件的404错误，原因：在xml文件中引用了xsl样式：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180816122205266?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>但是我并没有这个rss.xsl文件怎么办呢？你会自己写吗，自己写也行，不过我对xsl语法不是太熟，我就试着在csdn官网找，根据它引入的路径，然后在地址栏输入<a href="https://blog.csdn.net/static_files/rss/rss.xsl" rel="nofollow">https://blog.csdn.net/static_files/rss/rss.xsl</a>果然，浏览器自动下载了该文件，然后复制到rss目录下就可以正常打开了，并且还可以在xsl中的style标签中自己修改、新增一些样式来美化xml在页面的展示：</p>
+
+<p><img alt="" class="has" src="https://img-blog.csdn.net/20180816114824930?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<p>补充：当设置了静态资源路径（ app.use(express.static("static")) ）时，服务器根目录默认就会打开该路径下的index.html文件,如果有的话。</p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/16 11:50:33 <a href="https://blog.csdn.net/qwe502763576/article/details/81738291">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81738291                    </div>
+                    <div>
+                        阅读：21                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]python学习2]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81702006</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81702006</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/15 15:12:51</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>python函数式</p>
+
+<pre class="has">
+<code class="language-python">#用map格式化list中的字符串
+list1 = ["ADMIN", "hello", "LinGe"]
+maps = lambda l : map(lambda s : s[0].upper() + s[1:].lower(), l)
+re = list(maps(list1))
+print(re)
+
+#用reduce求list中的乘积
+from functools import reduce
+list2 = [2,3,4,5]
+re2 = lambda l : reduce(lambda x,y : x * y, l)
+print(re2(list2))
+
+#不使用int字符串转数字或浮点
+def str2float(s):
+	idx = -1
+	str1 = ''
+	for i,v in enumerate(s):
+		if v == '.':
+			idx = i
+		else:
+			str1 += v
+	re = 0
+	DIGITS = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+	for i,v in enumerate(str1):
+		re = re + DIGITS[v] * 10**(len(str1) - (i+1))
+	if idx != -1:
+		return re / 10**len(s[idx+1:])
+	else:
+		return re
+strs = "125.0"
+print(str2float(strs))
+
+#只能转浮点
+def str2float2(s):
+    def char2num(s):
+        digits = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+        return digits[s]
+    def zheng(x,y):
+        return x * 10 + y
+    def xiao(x,y):
+        return x / 10 + y
+    a=s.find('.')
+    s1=[]
+    s2=[]
+    for i in range(a):
+        s1.append(s[i])
+    for j in range(a+1,len(s)):
+        s2.append(s[j])
+    s2=s2[::-1]
+    return reduce(zheng,map(char2num,s1)) + reduce(xiao,map(char2num,s2))/10
+print(str2float2(strs))
+
+#filter回数(121,12321)
+re3 = lambda n : filter(lambda v : v &lt; 10 or str(v) == str(v)[::-1], range(n))
+print(list(re3(10000)))</code></pre>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/15 15:12:51 <a href="https://blog.csdn.net/qwe502763576/article/details/81702006">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81702006                    </div>
+                    <div>
+                        阅读：12                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]python学习]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81667501</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81667501</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/14 15:26:29</pubDate>
+                <description>
+                    <![CDATA[
+                    <pre class="has">
+<code class="language-python">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# my first py demo! 2018-08-13
+age = input("请输入您的年龄：");
+if age &gt;= '18':
+	print("您是成年人！");
+else:
+	print("您是未成年！");
+
+print("""#标准数据类型6种
+#Number(数字)
+#String(字符串)
+#List(列表)
+#Tuple(元组)
+#Sets(集合)
+#Dict(字典)
+""");
+
+print(r'nihao \"linlin"')
+print('nihao \\"linlin"')
+
+print('Hello, {0}, 成绩提升了 {1:.1f}%'.format('小明', 17.125))
+print('Hello, %s, 成绩提升了 %d' % ('小王', 5))</code></pre>
+
+<pre class="has">
+<code class="language-python">height = int(input("请输入身高(cm):")) / 100
+weight = int(input("请输入体重(kg):"))
+bmi = weight / (height*height)
+print(height,bmi)
+if bmi &lt; 18.5:
+	print("体重过轻")
+elif 18.5 &lt;= bmi &lt; 25:
+	print("正常")
+elif 25 &lt;= bmi &lt; 28:
+	print("过重")
+elif 28 &lt;= bmi &lt; 32:
+	print("肥胖")
+else:
+	print("严重肥胖")</code></pre>
+
+<pre class="has">
+<code class="language-python">arr = range(6)
+re = 0
+for x in arr:
+	re += x
+print(re)
+
+num = 100
+re2 = 0
+while num &gt; 0:
+	re2 += num
+	num -= 2
+print(re2)
+
+names = ["小王", "小李", "小猪", "小吴"]
+for x in names:
+	if x == "小猪":
+		continue
+	print("hello", x)
+</code></pre>
+
+<pre class="has">
+<code class="language-python">dict1 = {"ming": "辅助",
+"xiaohu": "中单",
+"letme": "上单",
+"uzi": "ADC",
+"mlxg": "打野",
+"others": ["zitai", "qiqi", "karsa"]
+}
+print(dict1["others"][1])
+
+list1 = [1,2,3,3,4,5,5]
+list2 = [7,7,6,5,8]
+set1 = set(list1) &amp; set(list2)
+print("&amp;交集：",set1)
+set2 = set(list1) | set(list2)
+print("|并集：",set2)
+
+def re_abs(d):
+	if d &gt;= 0:
+		return d
+	else:
+		return -d
+re = re_abs(int(input("输入要求绝对值的数")))
+print(re)</code></pre>
+
+<pre class="has">
+<code class="language-python">#可变参数(arguments长度不受限制啦)
+def count(*num):
+    s = 0;
+    for i in num:
+        s = s + i;
+    print(s);
+nums = [1,2,3]
+count(*nums);
+
+#关键字参数（可以传递dict啦）
+def person(name,age,**city):
+    print('my name is:',name,'I come from:',city['city']);
+p = {'city':'Boston'};
+person('wyang','20',**p);
+
+#命名关键字参数（可以传递指定的dict属性啦）
+def persons(name,age=21,*,city,job):
+    print('my name is',name,'I\'m',age,'years old this year.','I come from:',city,'My job is ',job,' engineer.');
+ps = {'city':'Boston','job':'web'};
+persons('wyang',**ps);
+
+#参数组合
+def personss(name,age=20,*,city,job):
+    print('my name is',name,'I\'m',age,'years old this year.','I come from:',city,'My job is ',job,' engineer.');
+args = ['wyang',22]
+kw = {'city':'Boston','job':'web'};
+personss(*args,**kw);
+</code></pre>
+
+<pre class="has">
+<code class="language-python">#递归去字符串前后空白
+def trim(s):
+	if s[:1] == " ":
+		return trim(s[1:])
+	elif s[-1:] == " ":
+		return trim(s[:-1])
+	else:
+		return s
+str1 = '   hello world  '
+print(trim(str1))
+
+#用迭代取list最小值和最大值
+def findMinAndMax(arr):
+	if len(arr) == 0:
+		return None,None;
+	min = arr[0];
+	max = arr[0];
+	for v in arr:
+		if v &gt; max:
+			max = v;
+		elif v &lt; min:
+			min = v;
+	return min,max;
+if findMinAndMax([]) != (None, None):
+    print('测试失败!')
+elif findMinAndMax([7]) != (7, 7):
+    print('测试失败!')
+elif findMinAndMax([7, 1]) != (1, 7):
+    print('测试失败!')
+elif findMinAndMax([7, 1, 3, 9, 5]) != (1, 9):
+    print('测试失败!')
+else:
+    print('测试成功!')</code></pre>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/14 15:26:29 <a href="https://blog.csdn.net/qwe502763576/article/details/81667501">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81667501                    </div>
+                    <div>
+                        阅读：18                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]vue中结合animate.css实现元素动画入场]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81535928</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81535928</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/09 16:51:52</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>话不多说先看下demo的GIF：<img alt="" class="has" src="https://img-blog.csdn.net/20180809141714167?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>
+
+<pre class="has">
+<code>
+
+1.首先引入animate.css，可以直接在index.html中cdn引入；
+
+2.其次在开发这种动画较多的页面我觉得还是引用jquery比较方便，操作dom稍多，
+我这里没有使用jquery，就想复习复习原生js。可以npm安装，在build/webpack.base.conf.js中定义插件：
+    var webpack = require('webpack '); 
+    在module.exports的对象中加入：
+    plugins:[
+      new webpack.ProvidePlugin({
+         $:"jquery",
+         jQuery:"jquery",
+         "windows.jQuery":"jquery"
+      })
+    ],
+</code></pre>
+
+<p>接下来直接上该页面代码，就是一个vue组件：</p>
+
+<pre class="has">
+<code class="language-javascript">&lt;template&gt;
+  &lt;div class="home"&gt;
+		&lt;div class="header " id="header" :class="{fixed: isFixed}"&gt;
+		     &lt;div class=" fixed-width clearfix"&gt;
+		        &lt;div class="header-title fl"&gt;我是顶部&lt;/div&gt;
+		        &lt;div class="header-buy fr"  &gt;我也是顶部&lt;/div&gt;
+		     &lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="content"&gt;
+			&lt;div class="banner"&gt;&lt;/div&gt;
+			&lt;div class="animate-box slide"&gt;
+				&lt;h2 class="animate text-h2" data-ani="fadeInUpBig"&gt;LuckLin520 Written in Chengdu&lt;/h2&gt;
+				&lt;p class="animate text-p" data-ani="rollIn" data-delay="1000"&gt;Thank you for reading and I will continue to work hard! —————2018/08/08&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="animate-box bounce"&gt;
+				&lt;div class="animate yellow" data-ani="bounceInLeft"&gt;&lt;/div&gt;
+				&lt;div class="animate red" data-ani="bounceInRight"&gt;&lt;/div&gt;
+				&lt;div class="animate green" data-ani="bounceInLeft"&gt;&lt;/div&gt;
+				&lt;div class="animate blue" data-ani="bounceInRight"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="animate-box slide"&gt;
+				&lt;h2 class="animate text-h2" data-ani="fadeInUpBig"&gt;做真实的自己，一切都会好起来的&lt;/h2&gt;
+				&lt;p class="animate text-p" data-ani="slideInRight" data-delay="1000"&gt;Be true to yourself and everything will be fine&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="animate-box zoom"&gt;
+				&lt;div class="animate one" data-ani="bounceInLeft"&gt;&lt;/div&gt;
+				&lt;div class="animate two" data-ani="bounceInRight"&gt;&lt;/div&gt;
+				&lt;div class="animate three" data-ani="bounceInLeft"&gt;&lt;/div&gt;
+				&lt;div class="animate four" data-ani="bounceInRight"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+	export default {
+	  data () {
+	    return {
+	    	isFixed: 0
+	    }
+	  },
+	  methods: {
+	  	handleScroll() {
+	  		let top = pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+	  		if(top &gt; 250){
+	  			this.isFixed = 1;
+	  		}else if(top &lt; 200){
+	  			this.isFixed = 0;
+	  		}
+	  	},
+	  	handleAnimate() {
+	  		let top = pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+	  		let vh = document.documentElement.clientHeight;
+	  		let dom = document.querySelectorAll(".animate");
+	  		[].slice.call(dom).forEach(v =&gt; {
+	  			if(top + vh &gt; v.offsetTop){
+	  				var delay = v.dataset.delay;
+	  				if(delay){
+	  					setTimeout(() =&gt; {
+	  						v.style.opacity = 1;
+		  					v.classList.add(v.dataset.ani)
+		  				}, delay)
+	  				}else{
+	  					v.style.opacity = 1;
+	  					v.classList.add(v.dataset.ani)
+	  				}
+	  			}else{
+	  				v.classList.remove(v.dataset.ani)
+	  				v.style.opacity = 0;
+	  			}
+	  		})
+
+	  	}
+	  },
+	  mounted() {
+	  	this.$nextTick(() =&gt; {
+	  		this.handleAnimate()//初始化第一次加载时在视口内就执行动画
+	  		addEventListener('scroll', this.handleScroll);
+	  		addEventListener('scroll', this.handleAnimate);
+
+	  	})
+	  	
+	  },
+	  destroyed() {
+	  	removeEventListener('scroll', this.handleScroll);//避免影响其他页面
+	  	removeEventListener('scroll', this.handleAnimate);
+	  }
+	}
+&lt;/script&gt;
+
+&lt;style scoped lang="scss"&gt;
+	.header{
+		background: green;
+		height: 50px;
+	}
+	.fixed{
+        position: fixed;
+        top: 0px;
+        z-index: 4;
+        width: 100%;
+        animation: slideInDown .5s;
+    }
+    .content{
+    	height: 2000px;
+    	background: pink;
+    	overflow: hidden;
+    	.banner{
+			width: 80%;
+			height: 400px;
+			background:orange;
+			margin: 80px auto;
+    	}
+    	.slide{
+    		font-size: initial;
+    		height: 100px;
+    	}
+    	.bounce{
+    		width: 80%;
+    		margin:0 auto 80px;
+    		display: flex;
+    		flex-wrap: wrap;
+    		justify-content: space-between;
+    		&amp;&gt;div{
+    			height: 120px;
+    			float: left;
+    			width: 45%;
+    		}
+    		.yellow{
+    			background:yellow;
+    			margin-bottom: 40px;
+    		}
+    		.red{
+    			background:red;
+    		}
+    		.green{
+    			background:green;
+    		}
+    		.blue{
+    			background:blue;
+    		}
+    	}
+    	.zoom{
+    		width: 80%;
+    		margin:0 auto 80px;
+    		display: flex;
+    		justify-content: space-between;
+    		&amp;&gt;div{
+    			width: 23%;
+    			height: 263px;
+    		}
+    		.one{
+    			background:url(http://www.codingke.com/themes/codingnew-1/img/study/python/python_block1_img1.jpg) no-repeat center/100%;
+    		}
+    		.two{
+    			background:url(http://www.codingke.com/themes/codingnew-1/img/study/python/python_block1_img2.jpg) no-repeat center/100%;
+    		}
+    		.three{
+    			background:url(http://www.codingke.com/themes/codingnew-1/img/study/python/python_block1_img3.jpg) no-repeat center/100%;
+    		}
+    		.four{
+    			background:url(http://www.codingke.com/themes/codingnew-1/img/study/python/python_block1_img4.jpg) no-repeat center/100%;
+    		}
+    	}
+    }
+
+ //animate classs
+ .animate{
+ 	opacity: 0;
+ }
+ .fadeInUpBig{
+ 	animation: fadeInUpBig 1s;
+ }
+ .rollIn{
+ 	animation: rollIn 1s;
+ }
+ .slideInRight{
+ 	animation: slideInRight 1s;
+ }
+ .bounceInLeft{
+	animation: bounceInLeft 2s ease-in;
+ }
+ .bounceInRight{
+	animation: bounceInRight 2s ease-in;
+ }
+&lt;/style&gt;
+</code></pre>
+
+<p>不难看得出核心代码就是那个handleAnimate方法，实际运用中肯定多个页面会有动画效果，这个函数可以抽离成公共代码，其实他可以只需要接收一个所有运动元素的统一选择器(这里的".animate")，而该方法通过这些".animate"元素传入的自定义属性ani来判断该元素被指定了哪种动画类型，通过动态添加该类型名称的class来定义animation动画，在最初我的思路是将animation-delay动画延迟同样用该类型的class在css中定义，最后我又考虑到如果不止一个元素必须用同一个动画类型，但是有的需要有的不需要延迟呢，那不是该属性出现耦合了？所以最后把所有动画延迟定义在该元素自身—data-delay，没错又是自定义属性，把需要有延迟时间的元素就加一个自定义属性delay，执行中判断是否有该属性，有的话就用setTimeout来延迟该属性的值的时间添加动画class，这样就让动画样式和动画延迟互不影响了，动画类型样式完全复用，同时，如果直接定义animation-delay或者直接animation以简写的形式来定义动画延迟的话，当被添加上动画class时该元素就会立马显示出来，就是说在延迟期间(元素动起来之前)它也是处于显示状态的，可以用js操作用setTimeout来延迟元素显示出来，不过比较麻烦了，因为还得js获取animate-delay的值才能知道延迟时间，所以我上面最后用的是自定义属性通过延迟添加类来处理延迟动画，比较好操作。这些便是核心思路。</p>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/09 16:51:52 <a href="https://blog.csdn.net/qwe502763576/article/details/81535928">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81535928                    </div>
+                    <div>
+                        阅读：65                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]vue-cli中引入全局scss文件]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81459096</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81459096</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/06 18:39:31</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>首先，vue-cli中只需要安装node-sass和sass-loader就可以直接使用scss语法了，在组建的style标签中定义lang属性值为"scss"即可；但是就算在app.vue中引入公共scss文件也仅仅只能在app.vue中使用，要想全局使用这个文件中的变量或mixin就需要小配置一下了</p>
+
+<p>两步：</p>
+
+<pre class="has">
+<code>1：cnpm install sass-resources-loader -D
+2：打开 build/utils.js 文件(vue-cli 3.0以前版本才有，3.0版本还没有仔细研究，
+只知道去掉了build和config文件夹)，然后把scss: generateLoaders('sass')替换成如下代码
+scss: generateLoaders('sass').concat({
+  loader: 'sass-resources-loader',
+  options: {
+    resources: path.resolve(__dirname, '../src/assets/scss/COLOR.scss')
+  }
+}),
+这个COLOR.scss就是需要全局使用的scss文件</code></pre>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/06 18:39:31 <a href="https://blog.csdn.net/qwe502763576/article/details/81459096">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81459096                    </div>
+                    <div>
+                        阅读：38                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]beforeEach全局钩子管理用户访问权限！]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81452818</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81452818</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/08/06 13:52:53</pubDate>
+                <description>
+                    <![CDATA[
+                    <p> 创建路由：</p>
+
+<pre class="has">
+<code class="language-javascript">export default new Router({
+  routes: [{
+     path: '/',
+     component: { template: '&lt;div&gt;&lt;div&gt;公共页面&lt;/div&gt;&lt;router-link to="/admin1"&gt;取admin1&lt;/router-link&gt;&lt;router-link to="/boos1"&gt;取boos1&lt;/router-link&gt;&lt;/div&gt;' }
+   },
+   {
+     path: '/login',
+     name: 'HelloWorld',
+     component: HelloWorld
+   },
+   {
+     path: '/admin1',
+     meta: {
+       roles: ['admin'] //该页面可访问的权限
+     },
+     component: { template: '&lt;div&gt;admin页面1&lt;/div&gt;' }
+   },
+   {
+     path: '/boos1',
+     meta: {
+       roles: ['boos'] //该页面可访问的权限
+     },
+     component: { template: '&lt;div&gt;boos页面1&lt;/div&gt;' },
+   },
+   { path: '*', component: { template: '&lt;div&gt;404未找到&lt;/div&gt;' } }
+ ]
+})</code></pre>
+
+<p>模拟登录并保存用户信息到storage和store中：</p>
+
+<pre class="has">
+<code class="language-html">&lt;template&gt;
+  &lt;div class="login"&gt;
+    &lt;p&gt;选择登录身份：&lt;/p&gt;
+    &lt;button @click="login('user')"&gt;user&lt;/button&gt;&lt;button @click="login('admin')"&gt;admin&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import * as types from '@/store/types'
+export default {
+  data () {
+    return {
+    }
+  },
+  methods: {
+  	login(u) {
+  		let payload = {name: 'qqq', role: u, token: 'ncbnv'}
+  		this.$store.commit(types.USER, payload)
+  		var path = this.$route.query.redirect ? this.$route.query.redirect : '/';//登陆后判断是否有之前要访问的页面
+  		this.$router.replace(path)
+  	}
+  }
+}
+&lt;/script&gt;
+
+&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre>
+
+<p>main.js中：</p>
+
+<pre class="has">
+<code class="language-javascript">// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import store from './store'
+
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router: router,
+  store,
+  components: { App },
+  template: '&lt;App/&gt;'
+})
+
+router.beforeEach((to, from, next) =&gt; {
+  // var user = localStorage.user ? JSON.parse(localStorage.user) : '';
+  var user = store.state.user;
+  if (user &amp;&amp; user.token) { // 判断是否有token
+    if (to.meta.roles &amp;&amp; to.meta.roles.indexOf(user.role) === -1) {//页面有权限要求但用户不符合
+    	alert('403')
+    	if(from.path == '/login'){
+    		next('/')
+    	}else{
+    		next({path: from.path})
+    	}
+    } else {//页面没有权限要求就直接访问
+    	next()
+    }
+  } else if(to.path != '/login'){//没有token的话让跳转到登录页，并传递当前准备访问的路由
+      next({path:'/login', query: {redirect: to.fullPath}})
+  } else{
+  	next()
+  }
+})</code></pre>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/08/06 13:52:53 <a href="https://blog.csdn.net/qwe502763576/article/details/81452818">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81452818                    </div>
+                    <div>
+                        阅读：38                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]element-ui表格+分页器数据分页展示]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81283563</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81283563</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/07/30 13:35:43</pubDate>
+                <description>
+                    <![CDATA[
+                    <pre class="has">
+<code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"&gt;
+&lt;script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/element-ui/lib/index.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"&gt;&lt;/script&gt;
+&lt;style type="text/css"&gt;
+	#app{
+		width: 80%;
+		margin: auto;
+	}
+	.el-table td{
+		padding: 0;
+	}
+	.el-pagination{
+		text-align: right;
+	}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="app"&gt;
+	    &lt;el-table :data="list.slice((currpage - 1) * pagesize, currpage * pagesize)" border style="width: 100%"&gt;
+	    	&lt;el-table-column type="index" label="序号"&gt;
+	        &lt;/el-table-column&gt;
+	        &lt;el-table-column label="图片"&gt;
+	        	&lt;template slot-scope="scope"&gt;
+                    &lt;img :src="scope.row.image" width="40" height="40"/&gt;
+                &lt;/template&gt;
+	        &lt;/el-table-column&gt;
+	        &lt;el-table-column prop="name" label="商品名称"&gt;
+	        &lt;/el-table-column&gt;
+	        &lt;el-table-column prop="goodsId" label="ID"&gt;
+	        &lt;/el-table-column&gt;
+	        &lt;el-table-column prop="price" label="价格"&gt;
+	        &lt;/el-table-column&gt;
+	    &lt;/el-table&gt;
+		&lt;el-pagination background 
+			layout="prev, pager, next, sizes, total, jumper"
+			:page-sizes="[5, 10, 15, 20]"//每页展示条选择组件
+			:page-size="pagesize"//每页展示条
+			:total="list.length"
+			@current-change="handleCurrentChange"  // currentPage改变时会触发
+			@size-change="handleSizeChange" //pagesize改变时触发
+			&gt;
+		&lt;/el-pagination&gt;
+	&lt;/div&gt;
+
+	&lt;script type="text/javascript"&gt;
+		Vue.use(ELEMENT)
+		axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5ae417e4985d63275b55e177/luckLin'
+		axios.defaults.timeout = 1000
+		new Vue({
+			el: '#app',
+			data: {
+				msg: 8888,
+				list: [],
+				pagesize: 10,
+				currpage: 1
+			},
+			methods: {
+				getlist() {
+					let starttime = new Date();
+					axios('/mockDrink').then(data =&gt; {
+						console.log(new Date() - starttime)
+						this.list = data.data.data;
+					}).catch(err =&gt; {
+						console.error(err)
+						this.$alert('请求超时，刷新重试！')
+					})
+				},
+				handleCurrentChange(cpage) {
+					this.currpage = cpage;
+				},
+				handleSizeChange(psize) {
+					this.pagesize = psize;
+				}
+			},
+			mounted() {
+				this.getlist()
+			}
+		})
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<img alt="" src="https://img-blog.csdn.net/20180730135426151?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /><a href="https://blog.csdn.net/qwe502763576" rel="nofollow">https://blog.csdn.net/qwe502763576</a><p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/07/30 13:35:43 <a href="https://blog.csdn.net/qwe502763576/article/details/81283563">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81283563                    </div>
+                    <div>
+                        阅读：209                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[转]彻底禁用Chrome的“请停用以开发者模式运行的扩展程序”提示，附工具下载]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81202974</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81202974</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/07/25 14:58:31</pubDate>
+                <description>
+                    <![CDATA[
+                    <p><span style="color:#444444;">对于高版本chrome，经常会出现烦人的“请停用以开发者模式运行的扩展程序”提示，如图：</span><br /><img alt="" class="zoom" id="aimg_s6O66" src="http://image.haoji.me/201803/20180312_142912_913_8332.png" /><br /><span style="color:#444444;">网上盛传的组策略法已失效。</span><br /><br /><span style="color:#444444;">话不多说，解决办法如下：</span><br /><br /><span style="color:#444444;">1.双击 x96dbg.exe ，然后选择 x64dbg（如果打不开，换 x32dbg打开）：</span><br /><img alt="" class="zoom" id="aimg_Hiizb" src="http://image.haoji.me/201803/20180312_123705_457_1439.png" /><br /><br /><span style="color:#444444;">2.将chrome版本号文件夹下的 chrome.dll 拖至主窗口：</span><br /><img alt="" class="zoom" id="aimg_Xt77p" src="http://image.haoji.me/201803/20180312_124240_942_1264.png" /><br /><span style="color:#444444;">然后连续多次点击运行到用户代码按钮，直至窗口标题处的模块变成 chrome.dll</span><br /><br /><span style="color:#444444;">3.然后在主面板右键依次选择搜索 -&gt; 当前模块 -&gt; 字符串：</span><br /><img alt="" class="zoom" id="aimg_vpS7q" src="http://image.haoji.me/201803/20180312_124537_616_3647.png" /><br /><br /><span style="color:#444444;">4.然后会打开一个搜索界面，等待进度条加载完毕，搜索ExtensionDeveloperModeWarning：</span><br /><img alt="" class="zoom" id="aimg_knoz1" src="http://image.haoji.me/201803/20180312_124758_755_4562.png" /><br /><br /><span style="color:#444444;">5.会搜到2条结果，双击第一个，跳转到反汇编界面，往上翻一点，找到cmp eax,2（也有可能是cmp eax,3）</span><br /><img alt="" class="zoom" id="aimg_lzqI8" src="http://image.haoji.me/201803/20180312_125051_645_8661.png" /><br /><br /><span style="color:#444444;">6.双击打开编辑页面，修改成cmp eax,9，然后点击确定，注意只需要点击一次确定即可，点击确定后它还是会继续弹出其它行的编辑界面，此时直接关闭对话框即可</span><img alt="" class="zoom" id="aimg_yFLzM" src="http://image.haoji.me/201803/20180312_125258_344_3025.png" /><br /><br /><span style="color:#444444;">7.修改完之后Ctrl+P导出修改过的dll文件（点击修补文件按钮就是导出dll文件）：</span><br /><img alt="" class="zoom" id="aimg_iBvvr" src="http://image.haoji.me/201803/20180312_125503_589_4007.png" /><br /><br /><span style="color:#444444;">8.把dll文件导出到其它某个位置，命名为chrome.dll，然后把原始chrome.dll文件备份，再把这个修改过的替换，然后重启Chrome，提示已经没有了。</span><br /><br /><br /><span style="color:#444444;">注意一定要备份。</span><br /><span style="color:#444444;">chrome68测试成功。</span><br /><br /><strong>工具下载：https://www.lanzous.com/i13nt0b</strong></p>
+
+<p><span style="color:#444444;">注意：</span><br /><span style="color:#FF0000;">1.一定要备份。</span><br /><span style="color:#444444;">2.修改cmp eax,2数值后会出现其他修改窗口，不要点击任何按钮，直接关闭窗口即可。</span><br /><span style="color:#444444;">3.实测对启动速度无影响（本身只是修改判断警告逻辑，不涉及其他东西，理论上也是不会有影响的）</span></p>                    <div>
+                        作者：qwe502763576 发表于 2018/07/25 14:58:31 <a href="https://blog.csdn.net/qwe502763576/article/details/81202974">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81202974                    </div>
+                    <div>
+                        阅读：167                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]vue中原生手写抛物线实现小球飞奔入购物车的]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81118476</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81118476</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/07/19 16:51:23</pubDate>
+                <description>
+                    <![CDATA[
+                    <pre class="has">
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Swiper demo&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"&gt;
+    &lt;link rel="stylesheet" href="http://at.alicdn.com/t/font_695306_0fo55mcu0auk.css"&gt;
+    &lt;style&gt;
+    #app{
+        position: relative;
+        margin: 0 auto;
+        width: 375px;
+        height:667px;
+        background: grey;
+    }
+    #app .ball{
+        width: 20px;
+        height: 20px;
+        position:absolute;
+        right:15px;
+        top:80px;
+        z-index:200;
+    }
+    #app .ball .inner{
+        position: absolute;
+        top: 0;
+        width:16px;
+        height:16px;
+        border-radius:50%;
+        background-color:rgb(0,160,220);
+    }
+    #app .box{
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        width:60px;
+        height:60px;
+        font-size: 60px;
+        color: rgb(0,160,220);
+        transform: translateX(-20px);
+    }
+    button{
+        position: absolute;
+        z-index: 10;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color:rgb(0,160,220);
+        text-align: center;
+        color:#fff;
+        padding: 0;
+        outline: none;
+    }
+
+    .show{
+        opacity: 0;
+    }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;div class="ball"&gt;
+            &lt;button @click="addCart"&gt;+&lt;/button&gt;
+            &lt;div v-for="ball in balls" 
+                :class="{show: !ball.run}"
+                class="inner" ref="ball"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;i class="box iconfont icon-shangpinguanli" ref="cart"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        new Vue({
+            el: '#app',
+            data: {
+                balls: [
+                    {run: false},
+                    {run: false},
+                    {run: false},
+                    {run: false},
+                    {run: false}
+                ],
+                ballIndex: 0
+            },
+            computed: {
+                notRun() {
+                    return this.balls.filter(v =&gt; !v.run)
+                }
+            },
+            watch: {
+                ballIndex(nv) {
+                   this.ballIndex = nv == this.balls.length ? 0 : nv;
+                }
+            },
+            methods: {
+                parabola(element, options, arc, duration){
+                    duration = duration || 800;
+                    var start = this.offset(element);
+                    var x = options.left - start.left,
+                        y = options.top - start.top;
+                    var a = arc, c = 0, b = (y - a * x * x) / x;
+                    var date = +new Date();
+                    var timer = setInterval(() =&gt; {
+                        var elapsed = Math.min(+new Date() - date, duration);
+                        var _x = elapsed * x / duration,
+                            _y = a * _x * _x + b * _x + c;
+                        this.offset(element, {left : _x + start.left, top : _y + start.top});
+                        if(elapsed === duration)
+                            clearInterval(timer);
+                    },1000/60)
+                },
+                offset(element,coord){
+                    if(typeof coord === "undefined"){
+                        var _top = 0, _left = 0; 
+                        while(element !== null){
+                            _top += element.offsetTop;
+                            _left += element.offsetLeft;
+                            element = element.offsetParent;
+                        }
+                        return {top : _top, left : _left};
+                    }
+                    var _top = 0, _left = 0, parent = element.offsetParent;
+                    while(parent !== null){
+                        _top += parent.offsetTop;
+                        _left += parent.offsetLeft;
+                        parent = parent.offsetParent;
+                    }
+                    _left = coord.left - _left;/*要设置的相对文档的定位距离相当于是用此距离减去其父元素在文档中的定位*/
+                    _top = coord.top - _top;
+                    // css(element,{left : _left+"px", top : _top+"px"});
+                    element.style.left =  _left+"px";
+                    element.style.top =  _top+"px";
+                },
+                addCart() {
+                    var idx = this.ballIndex;
+                    console.log(idx)
+                    this.balls[idx].run = true;
+                    this.parabola(this.$refs.ball[idx], this.offset(this.$refs.cart), 0.01, 800);
+                    setTimeout(() =&gt; {
+                        this.balls[idx].run = false;
+                        this.$refs.ball[idx].style.top = "";
+                        this.$refs.ball[idx].style.left = "";
+                    }, 850);
+                    this.ballIndex++;
+                }
+            },
+            mounted() {
+            }
+        })
+    &lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+<p><img alt="luckLin:qq502763576" class="has" src="https://img-blog.csdn.net/20180719164952354?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F3ZTUwMjc2MzU3Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p>                    <div>
+                        作者：qwe502763576 发表于 2018/07/19 16:51:23 <a href="https://blog.csdn.net/qwe502763576/article/details/81118476">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81118476                    </div>
+                    <div>
+                        阅读：51                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]（jQuery）滚动到某一元素元素动画入场效果+楼层导航]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81080492</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81080492</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/07/17 14:21:09</pubDate>
+                <description>
+                    <![CDATA[
+                    <pre class="has">
+<code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;页面滚动到相应位置运行css3动画&lt;/title&gt;
+&lt;style&gt;
+a{text-decoration: none;color:inherit}
+.nav{width: 110px;position: fixed; top: 50px;right: 0}
+.nav ul{padding:0; list-style: none;display: flex;flex-direction:column;justify-content: space-around;background: grey;}
+.nav ul li{
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	
+}
+
+.con{ height:1200px;}
+.list{ list-style:none; padding:0; margin:0; border-top:2px solid blue;}
+.list li{ height:500px; border-bottom:1px solid green;}
+.list .move p{ animation:move 1s;}
+@keyframes move{
+	from{ opacity:0; margin-left:500px;}
+	to{ opacity:1; margin-left:0;}
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class="nav"&gt;
+	&lt;ul&gt;
+		&lt;li class="nt0"&gt;&lt;a href="#"&gt;顶部&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nt1"&gt;&lt;a href="#"&gt;第一屏&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nt2"&gt;&lt;a href="#"&gt;第二屏&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nt3"&gt;&lt;a href="#"&gt;第三屏&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="con"&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/div&gt;
+&lt;ul class="list"&gt;	
+	&lt;li data-nt="nt1"&gt;
+    	&lt;p&gt;第1屏动画进入视线&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li data-nt="nt2"&gt;
+    	&lt;p&gt;第2屏动画进入视线&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li data-nt="nt3"&gt;
+    	&lt;p&gt;第3屏动画进入视线&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;script src="jquery-1.12.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+	var a,b,c;
+	a=$(window).height();	
+	$(window).scroll(function(){		
+		var b=$(this).scrollTop();
+		$(".list li").each(function(){
+			c=$(this).offset().top;							
+			if(a+b&gt;c){
+				$(this).addClass("move");
+			}
+			else{
+				$(this).removeClass("move");
+			}
+		});	
+	});
+
+
+	$(".nav ul li").click(function(e) {
+		e.preventDefault();
+		var clickEl = $(this), ofTop = 0;
+		if(clickEl.attr("class") != "nt0"){
+			$("ul.list li").each(function() {
+				if($(this).data("nt") === clickEl.attr("class")){
+					ofTop = $(this).offset().top;
+				}
+			})
+		}
+		$("html").animate({scrollTop: ofTop}, 300)
+	})
+				
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p> </p>                    <div>
+                        作者：qwe502763576 发表于 2018/07/17 14:21:09 <a href="https://blog.csdn.net/qwe502763576/article/details/81080492">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81080492                    </div>
+                    <div>
+                        阅读：56                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[转]nodejs+express+handlebars整合demo及转义\问题分析]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/81023696</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/81023696</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/07/12 22:47:04</pubDate>
+                <description>
+                    <![CDATA[
+                    <p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">在分析转义Handlebars+express问题之前先把nodejs+handlebars+express的项目构建过程说明。 <br />express 4+handlebars构建项目快捷的方式是： <br /><img src="https://img-blog.csdn.net/20170104185037056?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDU0Mzc4NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="" /> <br />如图可选ejs/jade/hbs等模板引擎，现在我们选hbs(注意express的版本是4.0+)</p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">我选择整合handlebars的方式是在已有的nodejs项目上引入 express-handlebars github地址：<a href="https://github.com/ericf/express-handlebars" rel="nofollow">github</a></p><ol style="list-style:none;color:rgb(51,51,51);font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;font-size:14px;background-color:rgb(255,255,255);"><li>在已有express4 构建的项目上安装<code style="font-size:14px;line-height:22px;">npm install express-handlebars</code></li><li>app.js里添加如下内容（替换以前的引擎模板例如ejs）：</li></ol><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs lasso has-numbering"><span class="hljs-built_in">var</span> exphbs  <span class="hljs-subst">=</span> <span class="hljs-keyword">require</span>(<span class="hljs-string">'express-handlebars'</span>);
+<span class="hljs-built_in">var</span> hbsHelper <span class="hljs-subst">=</span> <span class="hljs-keyword">require</span>(<span class="hljs-string">'./util/hbsHelper'</span>);
+
+app<span class="hljs-built_in">.</span><span class="hljs-built_in">set</span>(<span class="hljs-string">'views'</span>, path<span class="hljs-built_in">.</span><span class="hljs-keyword">join</span>(__dirname, <span class="hljs-string">'views'</span>));
+app<span class="hljs-built_in">.</span>engine(<span class="hljs-string">'.hbs'</span>, exphbs({
+    layoutsDir: <span class="hljs-string">'views'</span>,
+    defaultLayout: <span class="hljs-string">'layout'</span>,
+    extname: <span class="hljs-string">'.hbs'</span>,
+    helpers:hbsHelper
+}));
+app<span class="hljs-built_in">.</span><span class="hljs-built_in">set</span>(<span class="hljs-string">'view engine'</span>, <span class="hljs-string">'.hbs'</span>);</code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">这个hbsHelper.js是我自己写的:</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs javascript has-numbering">
+<span class="hljs-keyword">var</span> helper = {section: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(name, block)</span>{</span>
+    <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>._sections) <span class="hljs-keyword">this</span>._sections = {};
+    <span class="hljs-keyword">this</span>._sections[name] = block.fn(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    }
+}
+module.exports = helper</code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">3 客户端页面views <br />layout.hbs</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs handlebars has-numbering"><span class="xml"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+      </span><span class="hljs-expression">{{&gt;<span class="hljs-variable">head</span>}}</span><span class="xml">
+      </span><span class="hljs-expression">{{{_<span class="hljs-variable">sections.css</span>}}</span><span class="xml">}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    </span><span class="hljs-expression">{{&gt;<span class="hljs-variable">header</span>}}</span><span class="xml">
+    </span><span class="hljs-expression">{{{<span class="hljs-variable">body</span>}}</span><span class="xml">}
+    </span><span class="hljs-expression">{{&gt;<span class="hljs-variable">weather</span>}}</span><span class="xml">
+    </span><span class="hljs-expression">{{&gt;<span class="hljs-variable">footer</span>}}</span><span class="xml">
+    </span><span class="hljs-expression">{{{_<span class="hljs-variable">sections.js</span>}}</span><span class="xml">}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span></code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">其中footer(对应目录文件： views/partials/footer.hbs)引入的是js,如下:</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs xml has-numbering"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"javascripts/lib/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">如此就简要的说明了nodejs+express+handlebars整合过程。</p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">以下是客户端数据请求加载过程说明及问题分析：</p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);"><span style="font-weight:700;"><span>客户端页面数据加载</span></span></p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);"><span style="font-weight:700;">方式一: 向服务端发出路由请求的时候获取数据</span></p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">路由配置：routes/index.js</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs javascript has-numbering"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
+<span class="hljs-keyword">var</span> router= express.Router();
+router.get(<span class="hljs-string">'/base-dd'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res, next)</span> {</span>
+  res.render(<span class="hljs-string">'base-dd'</span>,{ daduis: [
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"&lt;p&gt;一大队&lt;/p&gt;"</span>,
+      <span class="hljs-string">"responsiblearea"</span>: <span class="hljs-string">"陆家嘴,北蔡、六里、东明部分地区"</span>
+    },
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"二大队"</span>,
+      <span class="hljs-string">"responsiblearea"</span>: <span class="hljs-string">"迪斯尼，北蔡、六里、东明部分地区"</span>
+    },
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"三大队"</span>,
+      <span class="hljs-string">"responsiblearea"</span>: <span class="hljs-string">"张江高科，北蔡、六里、东明部分地区"</span>
+    }
+  ] });
+});
+module.exports = router;</code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">数据显示页面：demo.hbs</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs handlebars has-numbering"><span class="xml"><span class="hljs-comment">&lt;!--demo.hbs的内容会被添加到layout.hbs </span></span><span class="hljs-expression">{{{<span class="hljs-variable">body</span>}}</span><span class="xml"><span class="hljs-comment">}里 
+（是否要用布局hbs可自己配置）--&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel"</span>&gt;</span>              
+                                     <span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>  
+                                   <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>大队名称<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>责任区域<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>                                           
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tableList"</span> &gt;</span>
+                                        </span><span class="hljs-expression">{{<span class="hljs-begin-block">#<span class="hljs-keyword">each</span> daduis</span>}}</span><span class="xml">
+                                      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span></span><span class="hljs-expression">{{{<span class="hljs-variable">name</span>}}</span><span class="xml">}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                                   <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span></span><span class="hljs-expression">{{<span class="hljs-variable">responsiblearea</span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+                                        </span><span class="hljs-expression">{{<span class="hljs-end-block">/<span class="hljs-keyword">each</span></span>}}</span><span class="xml">
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span></span></code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">这种方式就是在客户端发出/base-dd路由请求后，通过路由配置里的res.render(‘base-dd’，{daduis:[..]})实现传参,把数组daduis传到到 {{#each daduis}}，通过handlebars模板引擎遍历数组，渲染出一行行带数据的dom（tr）。</p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);"><span style="font-weight:700;">方式二：路由配置里不传参数，在页面已经加载完成后，在js（$(document).ready(function(){….});）里主动发出ajax请求获取数据。</span></p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">路由配置：routes/index.js</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs javascript has-numbering"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
+<span class="hljs-keyword">var</span> router= express.Router();
+router.get(<span class="hljs-string">'/base-dd'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res, next)</span> {</span>
+  res.render(<span class="hljs-string">'base-dd'</span>);
+});
+module.exports = router;</code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">数据显示页面：demo.hbs</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs handlebars has-numbering"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel"</span>&gt;</span>              
+                                     <span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>  
+                                   <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>大队名称<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>责任区域<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>                                           
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tableList"</span> &gt;</span>
+
+                                        <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+
+</span><span class="hljs-expression">{{<span class="hljs-begin-block">#section </span>'<span class="hljs-variable">js</span>'}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"javascripts/demo.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tableList_template"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/x-handlebars-template"</span>&gt;</span><span class="javascript">
+        \</span></span><span class="hljs-expression">{{<span class="hljs-begin-block">#<span class="hljs-keyword">each</span> daduis</span>}}</span><span class="xml"><span class="javascript">
+        &lt;tr&gt;
+               <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>\</span></span></span><span class="hljs-expression">{{<span class="hljs-variable">name</span>}}</span><span class="xml"><span class="javascript">&lt;<span class="hljs-regexp">/td&gt;
+              &lt;td"&gt;</span></span></span><span class="hljs-expression">{{<span class="hljs-variable">responsiblearea</span>}}</span><span class="xml">&lt;<span class="hljs-regexp">/td&gt;
+        &lt;/</span>tr&gt;
+        \</span><span class="hljs-expression">{{<span class="hljs-end-block">/<span class="hljs-keyword">each</span></span>}}</span><span class="xml"><span class="javascript">
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</span><span class="hljs-expression">{{<span class="hljs-end-block">/section</span>}}</span></code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">引用的demo.js</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs javascript has-numbering">$(document).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+    showDaduiHelper();
+});
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showDaduiHelper</span><span class="hljs-params">()</span>{</span>
+    $.get(<span class="hljs-string">"/dadui/queryAll"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(result)</span>{</span>
+        <span class="hljs-keyword">var</span> data = {daduis:result};
+        <span class="hljs-keyword">var</span> source   = $(<span class="hljs-string">"#tableList_template"</span>).html();
+        <span class="hljs-keyword">var</span> template = Handlebars.compile(source);
+        console.log(data);
+        $(<span class="hljs-string">"#tableList"</span>)[<span class="hljs-number">0</span>].innerHTML = template(data);
+        testHandlebars();
+    });
+}</code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">这种方式就是通过ajax请求获得数据daduis, 通过<code style="font-size:14px;line-height:22px;">Handlebars.compile</code> 编译模板<code style="font-size:14px;line-height:22px;">$("#tableList_template")</code>，最后<code style="font-size:14px;line-height:22px;">template(data)</code>把数据注入模板并且把dom <code style="font-size:14px;line-height:22px;">innerHTML</code>填入到<code style="font-size:14px;line-height:22px;">$("#tableList")</code>里。</p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);"><span style="font-weight:700;">问题：</span> <br />仔细看<code style="font-size:14px;line-height:22px;">&lt;script id="tableList_template" type="text/x-handlebars-template"&gt;&lt;/script&gt;</code>里handlebars大括号的使用方式，是不是每个大括号前面都有<code style="font-size:14px;line-height:22px;">\</code>转义符号？ 为什么转义？</p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">加入我们不转义：</p><pre class="prettyprint" style="font-size:14px;line-height:22px;"><code class="hljs handlebars has-numbering"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tableList_template"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/x-handlebars-template"</span>&gt;</span><span class="javascript">
+        </span></span><span class="hljs-expression">{{<span class="hljs-begin-block">#<span class="hljs-keyword">each</span> daduis</span>}}</span><span class="xml"><span class="javascript">
+        &lt;tr&gt;
+               <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span></span></span></span><span class="hljs-expression">{{<span class="hljs-variable">name</span>}}</span><span class="xml"><span class="javascript">&lt;<span class="hljs-regexp">/td&gt;
+              &lt;td"&gt;</span></span></span><span class="hljs-expression">{{<span class="hljs-variable">responsiblearea</span>}}</span><span class="xml">&lt;<span class="hljs-regexp">/td&gt;
+        &lt;/</span>tr&gt;
+        </span><span class="hljs-expression">{{<span class="hljs-end-block">/<span class="hljs-keyword">each</span></span>}}</span><span class="xml"><span class="javascript">
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span></code></pre><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">最后渲染出页面为空，不显示表格！ <br />为啥呢？ <br />因为在<code style="font-size:14px;line-height:22px;">res.render('base-dd');</code>后，在<code style="font-size:14px;line-height:22px;">showDaduiHelper();</code>前，handlebars已经将<code style="font-size:14px;line-height:22px;">tableList_template</code>里的数据进行注入并渲染成dom,由于<code style="font-size:14px;line-height:22px;">res.render('base-dd')</code>未传参数，daduis自然就是null,也就不会执行<code style="font-size:14px;line-height:22px;">{{#each daduis}}</code>，所以是空的！，如图： <br /><img src="https://img-blog.csdn.net/20170104204644090?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDU0Mzc4NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="" /></p><p style="font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;background-color:rgb(255,255,255);">所以我们就在所有handlebars标签前面加上转义符号“\”,这样第一次加载渲染页面的时候，服务端视图引擎就“不认识”这些handlebars标签，如图： <br /><img src="https://img-blog.csdn.net/20170104205152267?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDU0Mzc4NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="" /><br /></p><p>从而躲过第一次由服务端render引发的数据注入，再执行<code style="font-size:14px;line-height:22px;">$(document).ready(function(){ showDaduiHelper();});</code>后，客户端通过ajax主动请求数据，重新编译模板并加载数据, 渲染出正确的dom。</p><p>结合express： http://wiki.jikexueyuan.com/project/express-mongodb-setup-blog/handlebars.html<br /></p><p>使用Handlebars模块化你的页面：https://www.jianshu.com/p/a38ec7ef339a<br /></p>                    <div>
+                        作者：qwe502763576 发表于 2018/07/12 22:47:04 <a href="https://blog.csdn.net/qwe502763576/article/details/81023696">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/81023696                    </div>
+                    <div>
+                        阅读：25                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[转]js获取内网ip地址，操作系统，浏览器版本等信息]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/80740687</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/80740687</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/06/20 00:36:31</pubDate>
+                <description>
+                    <![CDATA[
+                    <p style="line-height:1.5;color:rgb(0,0,0);font-size:13px;font-family:Verdana, Arial, Helvetica, sans-serif;text-align:left;background-color:rgb(254,254,242);">这次呢，说一下使用js获取用户电脑的ip信息，刚开始只是想获取用户ip，后来就顺带着获取了操作系统和浏览器信息。</p><p style="line-height:1.5;color:rgb(0,0,0);font-size:13px;font-family:Verdana, Arial, Helvetica, sans-serif;text-align:left;background-color:rgb(254,254,242);">　　先说下获取<span style="line-height:1.5;color:rgb(255,0,0);">用户ip地址</span>，包括像ipv4,ipv6,掩码等内容，但是大部分都要根据浏览器的支持情况来决定，目前主流浏览器对于ipv4的支持是统一的。<span style="line-height:1.5;color:rgb(255,0,0);">第一种</span>：用于仅支持IE的且允许Activex运行，利用ActiveObject来获取。这种的话可以选择性使用。<span style="line-height:1.5;color:rgb(255,0,0);">第二种</span>：利用其它平台的接口，在自己程序中使用如：新浪，太平洋等的接口，来给用户返回ip地址，这种是不太安全的方式，万一人家改变接口了呢？<span style="line-height:1.5;color:rgb(255,0,0);">第三种（也是我采用的方式）</span>：使用WebRTC(Web Real-Time Communications),他的定义是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。当然这些信息和基本api在<a title="WebRTC" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" rel="nofollow" style="color:rgb(7,93,179);">MDN</a>上面是可以查看的。<span style="line-height:1.5;color:rgb(255,0,0);">我们可以使用WebRTC获取ip地址，经测试，在chrome，opera，firefox，safari均可正常获取，对于IE和Edge，可以采用第一种方式进行兼容。<span style="line-height:1.5;color:rgb(0,0,0);">下面是获取代码（我这里没有支持IE/Edge）：</span></span></p><pre><code class="language-javascript">function getBrowserInfo(){
+    var agent = navigator.userAgent.toLowerCase() ;
+    console.log(agent);
+    var arr = [];
+    var system = agent.split(' ')[1].split(' ')[0].split('(')[1];
+    arr.push(system);
+    var regStr_edge = /edge\/[\d.]+/gi;
+    var regStr_ie = /trident\/[\d.]+/gi ;
+    var regStr_ff = /firefox\/[\d.]+/gi;
+    var regStr_chrome = /chrome\/[\d.]+/gi ;
+    var regStr_saf = /safari\/[\d.]+/gi ;
+    var regStr_opera = /opr\/[\d.]+/gi;
+    //IE
+    if(agent.indexOf("trident") &gt; 0){
+        arr.push(agent.match(regStr_ie)[0].split('/')[0]);
+        arr.push(agent.match(regStr_ie)[0].split('/')[1]);
+        return arr;
+    }
+    //Edge
+    if(agent.indexOf('edge') &gt; 0){
+        arr.push(agent.match(regStr_edge)[0].split('/')[0]);
+        arr.push(agent.match(regStr_edge)[0].split('/')[1]);
+        return arr;
+    }
+    //firefox
+    if(agent.indexOf("firefox") &gt; 0){
+        arr.push(agent.match(regStr_ff)[0].split('/')[0]);
+        arr.push(agent.match(regStr_ff)[0].split('/')[1]);
+        return arr;
+    }
+    //Opera
+    if(agent.indexOf("opr")&gt;0){
+        arr.push(agent.match(regStr_opera)[0].split('/')[0]);
+        arr.push(agent.match(regStr_opera)[0].split('/')[1]);
+        return arr;
+    }
+    //Safari
+    if(agent.indexOf("safari") &gt; 0 &amp;&amp; agent.indexOf("chrome") &lt; 0){
+        arr.push(agent.match(regStr_saf)[0].split('/')[0]);
+        arr.push(agent.match(regStr_saf)[0].split('/')[1]);
+        return arr;
+    }
+    //Chrome
+    if(agent.indexOf("chrome") &gt; 0){
+        arr.push(agent.match(regStr_chrome)[0].split('/')[0]);
+        arr.push(agent.match(regStr_chrome)[0].split('/')[1]);
+        return arr;
+    }else{
+        arr.push('请更换主流浏览器，例如chrome,firefox,opera,safari,IE,Edge!')
+        return arr;
+    }
+}
+</code></pre><p><span style="color:rgb(0,0,0);font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);">　　其次是获取</span><span style="line-height:1.5;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);color:rgb(255,0,0);">操作系统，浏览器信息</span><span style="color:rgb(0,0,0);font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);">：这里到没有那么麻烦，我使用了包含浏览器信息的Navigator对象，这个对象虽然没有公开标准，但是所有的浏览器都支持他，这就好办了。我们主要用到的是</span><span style="line-height:1.5;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;text-align:left;background-color:rgb(254,254,242);color:rgb(255,0,0);">useragent<span style="line-height:1.5;color:rgb(0,0,0);">属性，他包含了这些信息，我们要做的只是使用正则表达式分离和提取，针对不同的浏览器，兼容<span style="line-height:1.5;color:rgb(255,0,0);">chrome,firefox,opera,ie,edge,safari</span>等，对于其他浏览器，例如360极速等，会返回相应内核对应的浏览器名称。也可以再进行其他判断。下面是代码：</span></span></p><pre><code class="language-javascript">function getYourIP(){
+    var RTCPeerConnection = window.RTCPeerConnection || window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+    if (RTCPeerConnection) (function () {
+        var rtc = new RTCPeerConnection({iceServers:[]});
+        if (1 || window.mozRTCPeerConnection) {     
+            rtc.createDataChannel('', {reliable:false});
+        };
+        
+        rtc.onicecandidate = function (evt) {
+            if (evt.candidate) grepSDP("a="+evt.candidate.candidate);
+        };
+        rtc.createOffer(function (offerDesc) {
+            grepSDP(offerDesc.sdp);
+            rtc.setLocalDescription(offerDesc);
+        }, function (e) { console.warn("offer failed", e); });
+        
+        
+        var addrs = Object.create(null);
+        addrs["0.0.0.0"] = false;
+        function updateDisplay(newAddr) {
+            if (newAddr in addrs) return;
+            else addrs[newAddr] = true;
+            var displayAddrs = Object.keys(addrs).filter(function (k) { return addrs[k]; });
+            for(var i = 0; i &lt; displayAddrs.length; i++){
+                if(displayAddrs[i].length &gt; 16){
+                    displayAddrs.splice(i, 1);
+                    i--;
+                }
+            }
+            document.getElementById('list').textContent = displayAddrs[0];
+        }
+        
+        function grepSDP(sdp) {
+            var hosts = [];
+            sdp.split('\r\n').forEach(function (line, index, arr) { 
+               if (~line.indexOf("a=candidate")) {    
+                    var parts = line.split(' '),       
+                        addr = parts[4],
+                        type = parts[7];
+                    if (type === 'host') updateDisplay(addr);
+                } else if (~line.indexOf("c=")) {       
+                    var parts = line.split(' '),
+                        addr = parts[2];
+                    updateDisplay(addr);
+                }
+            });
+        }
+    })();
+    else{
+        document.getElementById('list').textContent = "请使用主流浏览器：chrome,firefox,opera,safari";
+    }
+}</code></pre><p><br /></p><p>用node内置系统模块os同步获取：</p><pre><code class="language-javascript">let getIP = function() {
+  let interfaces = require("os").networkInterfaces();
+  for (var devName in interfaces) {
+    var iface = interfaces[devName];
+    for (var i = 0; i &lt; iface.length; i++) {
+      let alias = iface[i];
+      if (
+        alias.family === "IPv4" &amp;&amp;
+        alias.address !== "127.0.0.1" &amp;&amp;
+        !alias.internal
+      ) {
+        if (alias.address) {
+          return alias.address;
+        }
+      }
+    }
+  }
+};</code></pre>                    <div>
+                        作者：qwe502763576 发表于 2018/06/20 00:36:31 <a href="https://blog.csdn.net/qwe502763576/article/details/80740687">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/80740687                    </div>
+                    <div>
+                        阅读：496                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]原生touch事件实现简易轮播]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/80237466</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/80237466</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/05/08 11:47:59</pubDate>
+                <description>
+                    <![CDATA[
+                    <pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" /&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+	&lt;style type="text/css"&gt;
+		*{margin:0; padding:0;}
+		.box{
+			box-sizing: border-box;
+			width: 400vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.box li{
+			box-sizing: border-box;
+			width: 100vw;
+			height: 140vw;
+			outline:1px solid green;
+			float: left;
+		}
+		#wrap{
+			height: 140vw;
+			width: 100vw;
+			border:1px solid;
+			overflow: hidden;
+			position: relative;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="wrap"&gt;
+		&lt;ul class="box"&gt;
+			&lt;li&gt;11111111111&lt;/li&gt;
+			&lt;li&gt;22222222222&lt;/li&gt;
+			&lt;li&gt;33333333333&lt;/li&gt;
+			&lt;li&gt;44444444444&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	
+&lt;script type="text/javascript"&gt;
+	let box = document.getElementsByClassName("box")[0];
+	let liWidth = box.getElementsByTagName("LI")[0].offsetWidth;
+	let left = 0;
+	let now = 0; 
+	box.addEventListener("touchstart", (e)=&gt;{
+		e.preventDefault();
+		left =  e.targetTouches[0].pageX;
+		now = box.offsetLeft;
+	});
+	box.addEventListener("touchmove", (e)=&gt;{
+		let range = e.targetTouches[0].pageX - left;
+		box.style.left = now + range +"px";
+	})
+	box.addEventListener("touchend", (e)=&gt;{
+		let n = Math.round(box.offsetLeft / liWidth);
+		n = n &gt; 0 ? 0 : n &lt; -3 ? -3 : n;
+		box.style.left = n * liWidth + "px";
+	})
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><br />                    <div>
+                        作者：qwe502763576 发表于 2018/05/08 11:47:59 <a href="https://blog.csdn.net/qwe502763576/article/details/80237466">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/80237466                    </div>
+                    <div>
+                        阅读：31                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]react脚手架打包的坑]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/80212501</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/80212501</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/05/06 11:00:53</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>首先看一下打包后的build文件：</p><p><img src="https://img-blog.csdn.net/2018050610503613" alt="" /><br /></p><p>相当于静态资源的根目录就是public文件，开发中所需要的图片或其他资源就放在public文件夹下，比如这里img文件中的图片，在任何组件中可以直接通过/img/1.jpg来获取1.jpg这张图片，但是如果通过cnpm run build打包后，用本地路径就访问不到该路径资源了，解决办法：<strong>改用相对路径：./img/1.jpg</strong></p><p><strong>注意：在打包之前需要在package.json中加入"homepage": "./"</strong></p><pre><code class="language-javascript">{
+  "name": "zhaozhilin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+ <span style="color:#cc0000;"> "homepage": "./"</span>
+}</code></pre><p>这样打包后的build文件中的html在本地路径中就可以直接查看了<br /></p>                    <div>
+                        作者：qwe502763576 发表于 2018/05/06 11:00:53 <a href="https://blog.csdn.net/qwe502763576/article/details/80212501">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/80212501                    </div>
+                    <div>
+                        阅读：345 评论：2 <a href="https://blog.csdn.net/qwe502763576/article/details/80212501#comments" target="_blank">查看评论</a>                    </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+                    <item>
+                                <title><![CDATA[[原]redux（四）用redux-thunk和redux中间件发送异步action]]></title>
+                <link>https://blog.csdn.net/qwe502763576/article/details/80212089</link>
+                <guid>https://blog.csdn.net/qwe502763576/article/details/80212089</guid>
+                <author>qwe502763576</author>
+                <pubDate>2018/05/06 10:20:24</pubDate>
+                <description>
+                    <![CDATA[
+                    <p>cnpm i redux-thunk，然后在store文件中引入，同时解构出redux的applyMiddleware，将thunk传入中间件，将中间件传入store：</p><pre><code class="language-javascript">import {createStore, applyMiddleware} from 'redux';
+import reducer from "./reducer";//引入当前目录下合并后的rreducer
+
+<strong>import thunk from 'redux-thunk';</strong>
+
+let store = createStore(reducer, applyMiddleware(thunk));
+export default store;</code></pre><p>更改actionCreator：</p><pre><code class="language-javascript">import {INT_NUMBER, DEC_NUMBER, INPUT_NUMBER}  from "./const"
+
+let createAction = {
+	intNumber(){
+		// return {  //action是一个对象  必须有type字段
+		// 	type:INT_NUMBER
+		// }
+		return dispatch=&gt;{
+			let act = {
+				type:INT_NUMBER
+			}
+			setTimeout(()=&gt;{//两秒钟之后再发送action
+				dispatch(act);
+			}, 2000)
+		}
+	},
+	decNumber(){
+		return {  //action是一个对象  必须有type字段
+			type:DEC_NUMBER
+		}
+	},
+	inputNumber(val){
+		return {
+			type: INPUT_NUMBER,
+			val
+		}
+	}
+}
+
+export default createAction;</code></pre><p>此时，++就是异步的操作了，两秒钟之后数据number才会+1</p><p><img src="https://img-blog.csdn.net/20180506101830110" alt="" /></p>                    <div>
+                        作者：qwe502763576 发表于 2018/05/06 10:20:24 <a href="https://blog.csdn.net/qwe502763576/article/details/80212089">原文链接</a> https://blog.csdn.net/qwe502763576/article/details/80212089                    </div>
+                    <div>
+                        阅读：56                     </div>
+                    ]]>
+                </description>
+                <category></category>
+            </item>
+            </channel>
+</rss>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box"></div>
+	<button onclick="gologin()">get login data</button>
+	<button onclick="getdetail()">get article detail</button>
+	<button onclick="getXML()">getXML</button>
+	<button onclick="getMeiZiTu()">getMeiZiTu</button>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var page = 1;
+	var data = [];
+	var detailUrl = "https://blog.csdn.net/qwe502763576/article/details/81781811"
+	function gologin() {
+		$.ajax({
+		   type: "GET",
+		   url: "/login/article",
+		   dataType: 'json',
+		   data: {page},
+		   success: function(data){
+		   		console.log(data)
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+
+		$.ajax({
+		   type: "GET",
+		   url: "/login/news",
+		   dataType: 'json',
+		   success: function(data){
+		   		console.log(data)
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+
+		$.ajax({
+		   type: "GET",
+		   url: "/login/weather",
+		   dataType: 'json',
+		   data: {city: "成都"},
+		   success: function(data){
+		   		console.log(data)
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+	}
+
+	function getdetail() {
+		$.ajax({
+		   type: "GET",
+		   url: "/login/articledetail",
+		   dataType: 'json',
+		   data: {url: detailUrl},
+		   success: function(data){
+		   		console.log(data)
+		   		$("body").html(data.data)
+		   		$("head").append(data.css)
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+	}
+	function getXML() {
+		$.ajax({
+		   type: "GET",
+		   url: "/getXML",
+		   dataType: 'text',
+		   success: function(data){
+		   		console.log(data)
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+	}
+	function getMeiZiTu() {
+		$.ajax({
+		   type: "GET",
+		   url: "/getMeiZiTu",
+		   dataType: 'text',
+		   data: {page},
+		   success: function(data){
+		   	data = JSON.parse(data)
+		   		console.log(data)
+		   		console.log(data.data)
+		   		document.body.innerHTML = data.data
+		   },
+		   error: function(XMLHttpRequest, textStatus, errorThrown){
+	          console.log(errorThrown)
+	       }
+		});
+	}
+</script>
+</body>
+</html>

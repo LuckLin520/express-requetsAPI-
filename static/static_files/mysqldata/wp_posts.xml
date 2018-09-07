@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.5.8.2
+- http://www.phpmyadmin.net
+-
+- 主机: localhost:3306
+- 生成日期: 2018 年 09 月 06 日 08:32
+- 服务器版本: 5.6.40
+- PHP 版本: 5.3.21
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="tbh2763502" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="wp_posts">
+                CREATE TABLE `wp_posts` (
+                  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+                  `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_content` longtext NOT NULL,
+                  `post_title` text NOT NULL,
+                  `post_excerpt` text NOT NULL,
+                  `post_status` varchar(20) NOT NULL DEFAULT 'publish',
+                  `comment_status` varchar(20) NOT NULL DEFAULT 'open',
+                  `ping_status` varchar(20) NOT NULL DEFAULT 'open',
+                  `post_password` varchar(255) NOT NULL DEFAULT '',
+                  `post_name` varchar(200) NOT NULL DEFAULT '',
+                  `to_ping` text NOT NULL,
+                  `pinged` text NOT NULL,
+                  `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                  `post_content_filtered` longtext NOT NULL,
+                  `post_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+                  `guid` varchar(255) NOT NULL DEFAULT '',
+                  `menu_order` int(11) NOT NULL DEFAULT '0',
+                  `post_type` varchar(20) NOT NULL DEFAULT 'post',
+                  `post_mime_type` varchar(100) NOT NULL DEFAULT '',
+                  `comment_count` bigint(20) NOT NULL DEFAULT '0',
+                  PRIMARY KEY (`ID`),
+                  KEY `post_name` (`post_name`(191)),
+                  KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
+                  KEY `post_parent` (`post_parent`),
+                  KEY `post_author` (`post_author`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - 数据库: 'tbh2763502'
+    -->
+    <database name="tbh2763502">
+        <!-- 表 wp_posts -->
+        
+	 </database>
+</pma_xml_export>
